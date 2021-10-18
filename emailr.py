@@ -7,7 +7,7 @@ from email import encoders
 
 
 def emailer(reciever,filename,filepath):
-    fromaddr = "brohithk940@gmail.com"
+    fromaddr = "bro@gmail.com"
     toaddr = reciever
    
     # instance of MIMEMultipart
@@ -20,10 +20,10 @@ def emailer(reciever,filename,filepath):
     msg['To'] = toaddr
   
     # storing the subject 
-    msg['Subject'] = "Covid Intel Report"
+    msg['Subject'] = "Automated Mail"
   
     # string to store the body of the mail
-    body = "Your requested report"
+    body = "Your requested mail"
   
     # attach the body with the msg instance
     msg.attach(MIMEText(body, 'plain'))
@@ -53,7 +53,7 @@ def emailer(reciever,filename,filepath):
     s.starttls()
   
     # Authentication
-    s.login(fromaddr, "helloworld@2")
+    s.login(fromaddr, "h")
   
     # Converts the Multipart msg into a string
     text = msg.as_string()
